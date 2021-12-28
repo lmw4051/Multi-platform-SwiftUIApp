@@ -13,9 +13,16 @@ struct CoursesView: View {
   
   var body: some View {
     ZStack {
-      CourseItem()
-        .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show)
-        .frame(width: 335, height: 250)
+      ScrollView {
+        VStack {
+          CourseItem()
+            .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show)
+            .frame(width: 335, height: 250)
+          CourseItem()
+            .frame(width: 335, height: 250)
+        }
+        .frame(maxWidth: .infinity)
+      }
       
       if show {
         ScrollView {
@@ -29,6 +36,7 @@ struct CoursesView: View {
           }
           .padding()
         }
+        .background(Color("Background 1"))
         .transition(
           .asymmetric(
             insertion: AnyTransition
