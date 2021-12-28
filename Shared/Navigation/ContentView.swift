@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+  #if os(iOS)
+  @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+  #endif
+
   @ViewBuilder
   
   var body: some View {
     #if os(iOS)
-    Sidebar()
+    if horizontalSizeClass == .compact {
+      
+    } else {
+      Sidebar()
+    }    
     #else
-    Sidebar()
       .frame(minWidth: 1000, minHeight: 600)
     #endif
   }

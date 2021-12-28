@@ -45,6 +45,7 @@
 		54F5CEA9277B73A90054F444 /* TutorialSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5CEA7277B73A90054F444 /* TutorialSection.swift */; };
 		54F5CEAE277B7F5B0054F444 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5CEAD277B7F5B0054F444 /* VisualEffectBlur.swift */; };
 		54F5CEB0277B7F7A0054F444 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5CEAF277B7F7A0054F444 /* VisualEffectBlur.swift */; };
+		54F5CEB4277B89E90054F444 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5CEB3277B89E90054F444 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		54F5CEA7277B73A90054F444 /* TutorialSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSection.swift; sourceTree = "<group>"; };
 		54F5CEAD277B7F5B0054F444 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		54F5CEAF277B7F7A0054F444 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		54F5CEB3277B89E90054F444 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				545DC021277AC56E000D38D0 /* ContentView.swift */,
 				545DC044277AD2F0000D38D0 /* Sidebar.swift */,
+				54F5CEB3277B89E90054F444 /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				545DC053277B00ED000D38D0 /* Course.swift in Sources */,
 				545DC045277AD2F0000D38D0 /* Sidebar.swift in Sources */,
+				54F5CEB4277B89E90054F444 /* TabBar.swift in Sources */,
 				545DC069277B7254000D38D0 /* LivestreamSection.swift in Sources */,
 				545DC048277AEE50000D38D0 /* CourseItem.swift in Sources */,
 				545DC05A277B6E38000D38D0 /* CourseDetail.swift in Sources */,
