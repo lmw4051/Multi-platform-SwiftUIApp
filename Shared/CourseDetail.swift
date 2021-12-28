@@ -18,8 +18,9 @@ struct CourseDetail: View {
           .matchedGeometryEffect(id: course.id, in: namespace)
           .frame(height: 300)
         VStack {
-          ForEach(0 ..< 20) { item in
-            CourseRow()
+          ForEach(courseSections) { item in
+            CourseRow(item: item)
+            Divider()
           }
         }
         .padding()

@@ -10,7 +10,7 @@ import SwiftUI
 struct Livestream: Identifiable, Hashable {
   var id = UUID()
   var title: String
-  var subtitle: String
+  var subTitle: String
   var text: String
   var image: String
   var logo: String
@@ -22,7 +22,7 @@ struct Livestream: Identifiable, Hashable {
 var livestreams = [
   Livestream(
     title: "UI/UX Design Livestreams",
-    subtitle: "Live sessions discussing about tips and tricks for designing user interfaces.",
+    subTitle: "Live sessions discussing about tips and tricks for designing user interfaces.",
     text: "6 videos",
     image: "Livestream 1",
     logo: "Logo UI Design",
@@ -32,7 +32,7 @@ var livestreams = [
   ),
   Livestream(
     title: "SwiftUI Livestreams",
-    subtitle: "Live sessions talking about design and code for SwiftUI.",
+    subTitle: "Live sessions talking about design and code for SwiftUI.",
     text: "3 videos",
     image: "Livestream 2",
     logo: "Logo SwiftUI",
@@ -42,7 +42,7 @@ var livestreams = [
   ),
   Livestream(
     title: "iOS Design Livestreams",
-    subtitle: "Live sessions discussing about strategies for designing for Apple's platforms.",
+    subTitle: "Live sessions discussing about strategies for designing for Apple's platforms.",
     text: "3 videos",
     image: "Livestream 3",
     logo: "Logo Figma",
@@ -52,7 +52,7 @@ var livestreams = [
   ),
   Livestream(
     title: "Sketch Livestreams",
-    subtitle: "Live sessions discussing about tips and tricks for designing user interfaces in Sketch.",
+    subTitle: "Live sessions discussing about tips and tricks for designing user interfaces in Sketch.",
     text: "6 videos",
     image: "Livestream 4",
     logo: "Logo Sketch",
@@ -62,7 +62,7 @@ var livestreams = [
   ),
   Livestream(
     title: "Framer Livestreams",
-    subtitle: "Live sessions talking about design and code for SwiftUI.",
+    subTitle: "Live sessions talking about design and code for SwiftUI.",
     text: "3 videos",
     image: "Livestream 5",
     logo: "Logo Framer",
@@ -72,7 +72,7 @@ var livestreams = [
   ),
   Livestream(
     title: "Adobe XD Livestreams",
-    subtitle: "Live sessions discussing about strategies for designing using Adobe XD.",
+    subTitle: "Live sessions discussing about strategies for designing using Adobe XD.",
     text: "3 videos",
     image: "Livestream 6",
     logo: "Logo XD",
