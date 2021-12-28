@@ -23,6 +23,8 @@
 		545DC049277AEE50000D38D0 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545DC047277AEE50000D38D0 /* CourseItem.swift */; };
 		545DC04D277AF276000D38D0 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545DC04C277AF276000D38D0 /* CourseList.swift */; };
 		545DC04E277AF276000D38D0 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545DC04C277AF276000D38D0 /* CourseList.swift */; };
+		545DC053277B00ED000D38D0 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545DC052277B00ED000D38D0 /* Course.swift */; };
+		545DC054277B00ED000D38D0 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545DC052277B00ED000D38D0 /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		545DC044277AD2F0000D38D0 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		545DC047277AEE50000D38D0 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		545DC04C277AF276000D38D0 /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
+		545DC052277B00ED000D38D0 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 				545DC04A277AEFBA000D38D0 /* Navigation */,
 				545DC04B277AEFD4000D38D0 /* Item */,
 				545DC041277AD18A000D38D0 /* CoursesView.swift */,
+				545DC052277B00ED000D38D0 /* Course.swift */,
 				545DC04C277AF276000D38D0 /* CourseList.swift */,
 				545DC022277AC56F000D38D0 /* Assets.xcassets */,
 			);
@@ -212,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545DC053277B00ED000D38D0 /* Course.swift in Sources */,
 				545DC045277AD2F0000D38D0 /* Sidebar.swift in Sources */,
 				545DC048277AEE50000D38D0 /* CourseItem.swift in Sources */,
 				545DC032277AC56F000D38D0 /* ContentView.swift in Sources */,
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				545DC054277B00ED000D38D0 /* Course.swift in Sources */,
 				545DC046277AD2F0000D38D0 /* Sidebar.swift in Sources */,
 				545DC049277AEE50000D38D0 /* CourseItem.swift in Sources */,
 				545DC033277AC56F000D38D0 /* ContentView.swift in Sources */,
