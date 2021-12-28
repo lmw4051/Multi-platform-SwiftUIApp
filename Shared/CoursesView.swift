@@ -43,33 +43,38 @@ struct CoursesView: View {
       .zIndex(1)
       
       if selectedItem != nil {
-        VStack {
-          ScrollView {
-            CourseItem(course: selectedItem!)
-              .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-              .frame(height: 300)
-              .onTapGesture {
-                withAnimation(.spring()) {
-                  show.toggle()
-                  selectedItem = nil
-                  isDisabled = false
-                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    isDisabled = false
-                  }
+        ZStack(alignment: .topTrailing) {
+          VStack {
+            ScrollView {
+              CourseItem(course: selectedItem!)
+                .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
+                .frame(height: 300)
+              VStack {
+                ForEach(0 ..< 20) { item in
+                  CourseRow()
                 }
               }
-            VStack {
-              ForEach(0 ..< 20) { item in
-                CourseRow()
+              .padding()
+            }
+          }
+          .background(Color("Background 1"))
+          .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+          .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
+          .edgesIgnoringSafeArea(.all)
+          
+          CloseButton()
+            .padding(.trailing, 16)
+            .onTapGesture {
+              withAnimation(.spring()) {
+                show.toggle()
+                selectedItem = nil
+                isDisabled = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                  isDisabled = false
+                }
               }
             }
-            .padding()
-          }
         }
-        .background(Color("Background 1"))
-        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
-        .edgesIgnoringSafeArea(.all)
         .zIndex(2)
       }
     }
