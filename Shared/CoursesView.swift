@@ -29,9 +29,18 @@ struct CoursesView: View {
           }
           .padding()
         }
-        .transition(.opacity)
+        .transition(
+          .asymmetric(
+            insertion: AnyTransition
+              .opacity
+              .animation(Animation.spring().delay(0.3)),
+            removal: AnyTransition
+              .opacity
+              .animation(.spring())
+          )
+        )
         .edgesIgnoringSafeArea(.all)
-      }      
+      }
     }
     .onTapGesture {
       withAnimation(.spring()) {
