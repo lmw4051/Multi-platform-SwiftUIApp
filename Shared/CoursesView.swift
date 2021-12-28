@@ -21,57 +21,56 @@ struct CoursesView: View {
           spacing: 16
         ) {
           ForEach(courses) { item in
-            CourseItem(course: item)
-              .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
-              .frame(height: 200)
-              .onTapGesture {
-                withAnimation(.spring()) {
-                  show.toggle()
-                  selectedItem = item
-                  isDisabled = true
+            VStack {
+              CourseItem(course: item)
+                .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show)
+                .frame(height: 200)
+                .onTapGesture {
+                  withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
+                    show.toggle()
+                    selectedItem = item
+                    isDisabled = true
+                  }
                 }
-              }
               .disabled(isDisabled)
+            }
+            .matchedGeometryEffect(id: "container\(item.id)", in: namespace, isSource: !show)
           }
         }
         .padding(16)
         .frame(maxWidth: .infinity)
       }
+      .zIndex(1)
       
       if selectedItem != nil {
-        ScrollView {
-          CourseItem(course: selectedItem!)
-            .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-            .frame(height: 300)
-            .onTapGesture {
-              withAnimation(.spring()) {
-                show.toggle()
-                selectedItem = nil
-                isDisabled = false
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        VStack {
+          ScrollView {
+            CourseItem(course: selectedItem!)
+              .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
+              .frame(height: 300)
+              .onTapGesture {
+                withAnimation(.spring()) {
+                  show.toggle()
+                  selectedItem = nil
                   isDisabled = false
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    isDisabled = false
+                  }
                 }
               }
+            VStack {
+              ForEach(0 ..< 20) { item in
+                CourseRow()
+              }
             }
-          VStack {
-            ForEach(0 ..< 20) { item in
-              CourseRow()
-            }
+            .padding()
           }
-          .padding()
         }
         .background(Color("Background 1"))
-        .transition(
-          .asymmetric(
-            insertion: AnyTransition
-              .opacity
-              .animation(Animation.spring().delay(0.3)),
-            removal: AnyTransition
-              .opacity
-              .animation(.spring())
-          )
-        )
+        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
         .edgesIgnoringSafeArea(.all)
+        .zIndex(2)
       }
     }
   }
