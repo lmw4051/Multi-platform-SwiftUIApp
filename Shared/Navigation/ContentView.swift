@@ -22,6 +22,7 @@ struct ContentView: View {
       Sidebar()
     }    
     #else
+    Sidebar()
       .frame(minWidth: 1000, minHeight: 600)
     #endif
   }

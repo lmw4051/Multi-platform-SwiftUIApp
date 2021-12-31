@@ -17,7 +17,7 @@ struct CourseSection: Identifiable, Hashable {
 
 var courseSections = [
   CourseSection(
-    title: "SwiftUI for iOS",
+    title: "SwiftUI Tutorial for iOS",
     subTitle: "Build a multi-platform app for iOS/iPadOS/Big Sur",
     logo: "Logo SwiftUI",
     color: Color(#colorLiteral(red: 0.1776223481, green: 0.003123702249, blue: 0.9679456353, alpha: 1))
@@ -47,7 +47,7 @@ var courseSections = [
     color: Color(#colorLiteral(red: 0.6941550374, green: 0, blue: 0.9111183882, alpha: 1))
   ),
   CourseSection(
-    title: "Show View and Transitions",
+    title: "View and Transitions",
     subTitle: "How to transition between views using preset animations",
     logo: "Logo SwiftUI",
     color: Color(#colorLiteral(red: 0.7368183136, green: 0, blue: 0.865359962, alpha: 1))
