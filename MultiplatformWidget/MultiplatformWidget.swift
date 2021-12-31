@@ -8,7 +8,6 @@
 import WidgetKit
 import SwiftUI
 import Intents
-import Multiplatform
 
 struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
